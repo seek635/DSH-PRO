@@ -1,0 +1,113 @@
+/* DSH PRO - overlay.css : 页面右下角浮动面板样式 */
+
+.dshpro-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 320px;
+  max-height: 70vh;
+  z-index: 2147483646;
+  background: rgba(24, 26, 31, 0.92);
+  color: #e8eaed;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  font: 12px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dshpro-panel.dshpro-min { max-height: none; }
+
+.dshpro-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  user-select: none;
+}
+.dshpro-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #666; flex: none;
+}
+.dshpro-dot.ok { background: #34c759; }
+.dshpro-dot.err { background: #ff5f57; }
+.dshpro-dot.busy { background: #ffcc00; animation: dshpro-blink 1s infinite; }
+@keyframes dshpro-blink { 50% { opacity: 0.35; } }
+
+.dshpro-title { font-weight: 600; letter-spacing: 0.4px; }
+.dshpro-phase { color: #9aa0a6; font-size: 11px; }
+.dshpro-toggle { margin-left: auto; color: #9aa0a6; cursor: pointer; }
+
+.dshpro-body { padding: 8px 12px 12px; overflow-y: auto; }
+.dshpro-min .dshpro-body { display: none; }
+
+.dshpro-row { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.dshpro-btn {
+  flex: 1 1 auto;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+}
+.dshpro-btn:hover { background: rgba(255,255,255,0.16); }
+.dshpro-btn.primary { background: #2f81f7; border-color: #2f81f7; }
+.dshpro-btn.primary:hover { background: #4a93ff; }
+.dshpro-btn.danger { background: #b62324; border-color: #b62324; }
+.dshpro-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.dshpro-select, .dshpro-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.3);
+  color: inherit;
+  font: inherit;
+}
+
+.dshpro-log {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 8px;
+  max-height: 140px;
+  overflow-y: auto;
+  font: 11px/1.5 Consolas, monospace;
+  color: #b9bbbe;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.dshpro-preview {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 204, 0, 0.08);
+  border: 1px dashed rgba(255, 204, 0, 0.5);
+  border-radius: 8px;
+  font: 11px/1.5 Consolas, monospace;
+  max-height: 120px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.dshpro-confirm-box {
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(255, 95, 87, 0.12);
+  border: 1px solid rgba(255, 95, 87, 0.5);
+  border-radius: 8px;
+}
+.dshpro-confirm-title { font-weight: 600; color: #ff8780; }
+
+.dshpro-settings { margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 8px; }
+.dshpro-settings .dshpro-input { margin-top: 4px; }
+.dshpro-label { color: #9aa0a6; font-size: 11px; margin-top: 6px; }

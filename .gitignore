@@ -1,0 +1,13 @@
+# 运行期密钥与状态——绝不能入库
+bridge/config.json
+
+# 本地运行产物
+.dsh-pro/
+
+# 桥接审计日志
+bridge/audit.jsonl
+
+# 系统/编辑器垃圾
+Thumbs.db
+.DS_Store
+*.log
