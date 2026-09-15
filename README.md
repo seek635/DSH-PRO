@@ -1,5 +1,7 @@
 # DSH PRO
 
+> **English**: A browser extension + local bridge that turns the DeepSeek web UI (chat.deepseek.com) into a local-capable agent — file read/write, directory tree, search, sandboxed bash, git queries — with multi-step tasks handed off to DeepSeek Harness (`dsh --profile headless`) for autonomous execution. No public tunnel needed; the bridge listens on 127.0.0.1 only. A community integration for the DeepSeek Harness ecosystem (not a cordis bundle — install via the steps below).
+
 把 **DeepSeek 网页版（chat.deepseek.com）** 升级为可以操作你本地电脑的 Agent：文件读写、目录树、搜索、安全 bash、git 查询，并且能把计划 **handoff 给 DeepSeek Harness（dsh headless）** 真正执行——和 CodexPro 的工作流同构，但执行器换成 dsh，而且**不需要任何公网隧道**（桥接服务只监听本机 127.0.0.1）。
 
 ```
